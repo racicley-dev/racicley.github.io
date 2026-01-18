@@ -1,7 +1,287 @@
----
-layout: default
-title: Home
----
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-# Bem-vindo ao meu site
-Este é um parágrafo de exemplo. Você pode usar **negrito**, *itálico* e [links](https://google.com).
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Profissional</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-color: #1f2937;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --section-spacing: 4rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header / Hero */
+        header {
+            background-color: var(--card-bg);
+            padding: 4rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: var(--section-spacing);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: var(--section-spacing);
+        }
+
+        h2 {
+            border-left: 5px solid var(--primary-color);
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        /* Cards for Exp and Education */
+        .card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .card-date {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .card-subtitle {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #374151;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: #e0e7ff;
+            color: #3730a3;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .card-header {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>[Seu Nome]</h1>
+            <p class="subtitle">Profissional de Dados & Machine Learning</p>
+            <div class="contact-info">
+                <span>📍 Brasil</span>
+                <span>📧 seu.email@exemplo.com</span>
+                <span>🔗 linkedin.com/in/seu-perfil</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>Sobre Mim</h2>
+            <div class="card">
+                <p>
+                    Profissional com cerca de 3 anos de experiência na área de dados, focado no desenvolvimento e deploy
+                    de modelos preditivos e engenharia de dados.
+                    Tenho forte interesse em pesquisa em Inteligência Artificial e aplicação de MLOps em ambientes de
+                    nuvem (AWS e GCP).
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experiência Profissional</h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Engenheiro de Machine Learning / Dados</span>
+                    <span class="card-date">2022 - Presente</span>
+                </div>
+                <span class="card-subtitle">Empresa Atual (Ex: Tech Solutions)</span>
+                <ul>
+                    <li>Criação e deploy de modelos preditivos utilizando <strong>Amazon SageMaker</strong>.</li>
+                    <li>Desenvolvimento de fluxos de dados (ETL) com <strong>AWS Lambda/Glue</strong> e <strong>GCP
+                            Cloud Functions</strong>.</li>
+                    <li>Gerenciamento e consulta de grandes volumes de dados no <strong>BigQuery</strong> e
+                        <strong>Redshift</strong>.</li>
+                    <li>Implementação de práticas de MLOps para monitoramento e versionamento de modelos.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Analista de Dados Júnior</span>
+                    <span class="card-date">2020 - 2022</span>
+                </div>
+                <span class="card-subtitle">Empresa Anterior</span>
+                <p>Atuação com análise exploratória de dados, automação de scripts em Python e criação de dashboards
+                    para suporte à tomada de decisão.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Formação Acadêmica</h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Mestrado em Inteligência Artificial</span>
+                    <span class="card-date">Planejado / Em Breve</span>
+                </div>
+                <span class="card-subtitle">Universidade (A definir)</span>
+                <p>Foco em pesquisa acadêmica e desenvolvimento de novas arquiteturas de Deep Learning.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Bacharelado em Ciência da Computação / Áreas Correlatas</span>
+                    <span class="card-date">Conclusão: 202X</span>
+                </div>
+                <span class="card-subtitle">Universidade X</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Habilidades em Computação</h2>
+            <div class="skills-grid">
+
+                <div class="skill-category">
+                    <h3>Linguagens & Backend</h3>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Java / Android</span>
+                        <span class="tag">HTML/CSS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="tags">
+                        <span class="tag">AWS (SageMaker, Lambda, Glue)</span>
+                        <span class="tag">GCP (BigQuery, Functions)</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">MLOps</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Data Science & AI</h3>
+                    <div class="tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Modelos Preditivos</span>
+                        <span class="tag">Análise de Investimentos</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 [Seu Nome]. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
